@@ -7,4 +7,4 @@
     - nginx
     - wordpress
     - mariadb
-    - files
+    - docker-compose

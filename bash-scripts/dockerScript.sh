@@ -16,5 +16,7 @@ docker volume rm $(docker volume ls -q)
 docker network rm $(docker network ls -q | grep -v "bridge\|host\|none")
 
 # Optionally, prune the system to remove any dangling data
+rm -rf ~/data/wordpress/*
+rm -rf ~/data/mariadb/*
 docker system prune -af
 docker volume prune -f
