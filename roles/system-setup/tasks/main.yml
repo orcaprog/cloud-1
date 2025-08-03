@@ -1,0 +1,9 @@
+- name: Copy docker script to remote host
+  copy:
+    src: "../../../bash-scripts/dockerScript.sh"
+    dest: "/tmp/dockerScript.sh"
+    mode: '0755'
+
+- name: Run docker script
+  shell: /tmp/dockerScript.sh
+  become: true

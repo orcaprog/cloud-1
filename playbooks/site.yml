@@ -1,0 +1,10 @@
+- name: Run Docker Script
+  hosts: droplet
+  become: true
+
+  roles:
+    - system-setup
+    - nginx
+    - wordpress
+    - mariadb
+    - files
